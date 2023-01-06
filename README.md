@@ -1,11 +1,11 @@
 # cyEcommerceSample
 Ecommerce Sample tests with a mix of simple, medium and complex or tricky scenarios designed using cypress customized framework. 
 
-#E-Commerce Sample Tests
+# E-Commerce Sample Tests
 
-##Brief About the Tests
+## Brief About the Tests
 
-**This projec includes some of the test cases which could be used on an e-commerce website. I have taken a sample website and its clothing section to execute my cy scripts.**
+** This projec includes some of the test cases which could be used on an e-commerce website. I have taken a sample website and its clothing section to execute my cy scripts. **
 
 https://demo.nopcommerce.com/clothing
 
@@ -27,9 +27,8 @@ These are plain test cases having cypress' default framework, without POM or BDD
 
 Moachawesome HTML reports has been implemented and created for the tests. HTML Report files are there in reports or reports-CrossBrowser folder, along with Videos.
 
-##How to setup
+## How to setup
 1. Download the project
 2. run this command: npm install
 3. Try running "npx cypress run"
 4. if any issues running above command. Install cypress with : "npm install cypress --save-dev"
-
