@@ -5,18 +5,28 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cy:run": "cypress run --headless -b chrome", 
-    "cy:parallel" : "cypress-parallel -s cy:run -t 3 -d cypress\\e2e\\ecommerceDemo",
-
-    "cy:runSpec" : "npx cypress run --spec 'cypress\\e2e\\ecommerceDemo\\*' --headed",
+    "cy:cucumber:tags" : "npx cypress run --env tags='@smoke'",
+    "cy:run": "cypress run --headless -b chrome",
+    "cy:parallel": "cypress-parallel -s cy:run -t 3 -d cypress\\e2e\\ecommerceDemo",
+    "cy:runSpec": "npx cypress run --spec 'cypress\\e2e\\ecommerceDemo\\*' --headed",
     "cy:runBrowsers": "npm run cy:runSpec -- --browser chrome | npm run cy:runSpec -- --browser edge"
-  
   },
   "author": "Amit Kumar Verma",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.2.0",
+    "@badeball/cypress-cucumber-preprocessor": "^17.2.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "cypress": "^12.13.0",
     "cypress-mochawesome-reporter": "^3.2.3",
-    "cypress-parallel": "^0.11.0"
+    "cypress-parallel": "^0.11.0",
+    "esbuild": "^0.17.19"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/e2e/stepDefinitions/*.{js,ts}",
+    "nonGlobalStepDefinitions": true,
+    "json": {
+      "enabled": false,
+      "output": "reports/jsonReport/test1.json"
+    }
   }
 }
