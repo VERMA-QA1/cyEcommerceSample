@@ -1,4 +1,7 @@
-
+videos
+reports
+node_modules
+reports-CrossBrowser/html
 node_modules/*
 node_modules/minimist/test/whitespace.js
 node_modules/minimist/test/unknown.js
